@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_김인호</title>
+     <script src="10_09.js">
+     </script>
+</head>
+<body>
+    <h1>1. 내부스크립트</h1>
+    <script>
+       document.write("여기는 body내 자바 스크립트")
+    </script>
+
+    <h1>2. 외부스크립트</h1>    
+    <button type="button" onclick="test1()">김인호</button>
+
+    <h1>3. 인라인 스크립트</h1> 
+    <a href="javascript:alert('welcome')">welcome</a>
+
+    <h1>4. 나를 눌러보아</h1>
+    <h3 onclick="document.write('마우스클릭')">나를 눌러보아</h3>
+
+    <h1>5. 전구</h1>
+    <img src="off.gif"  onmouseover="src='on.gif'" onmouseleave="src='off.gif'">
+    <br>
+    <button onclick="alert('김인호')">09_김인호</button>
+
+    <h1>6. confirm</h1>
+    <script>
+        answer=confirm("전구를 켤까요?");
+        document.write("answer : ", answer);
+        if(answer==true){
+            document.write("전구 on");
+            document.write("<img src='on.gif'>");
+        } else {
+            document.write("전구 off");
+            document.write("<img src='off.gif'>");
+
+        }
+    </script>
+    <h1>7. prompt</h1>
+    <script>
+        name=prompt("이름은?");
+        kor=prompt("국어는?");
+        math=prompt("수학은?");
+
+         document.write("안녕");
+        total=Number(kor)+Number(math);
+        avg=total/2;
+        document.write("<br>total : ",total, "<br>    avg : ",avg);
+        document.write("<table border=1>");
+        document.write("<tr><td>이름</td><td>"+name+"</td></tr>");
+        document.write("<tr><td>국어</td><td>"+kor+"</td></tr>");
+        document.write("<tr><td>수학</td><td>"+math+"</td></tr>");
+        document.write("<tr><td>총점</td><td>"+total+"</td></tr>");
+        document.write("<tr><td>평균</td><td>"+avg+"</td></tr>");
+        document.write("</table>"); 
+    </script>
+
+    <h1>8. if test</h1>
+    <script>
+        score=prompt("성적은?");
+        if(score>=90) grade="A";
+        else if(score>=90) grade="A";
+        else if(score>=80) grade="B";
+        else if(score>=70) grade="C";
+        else if(score>=60) grade="D";
+        else grade="F";
+
+        document.write("당신의 성적은 ",grade,"입니다.")
+    </script>
+    <h1>9. for test</h1>
+    <script>
+        for(i=0 ; i<10 ; i++) {
+            document.write("welcome!!! <br>")
+        }
+
+    </script>
+</body>
+</html>
